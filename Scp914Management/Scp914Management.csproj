@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="PluginMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeStructs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

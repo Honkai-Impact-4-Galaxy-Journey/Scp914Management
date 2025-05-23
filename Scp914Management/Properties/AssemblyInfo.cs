@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Scp914Management")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Honkai Impact 4: Jalaxy Journey")]
 [assembly: AssemblyProduct("Scp914Management")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2025")]
+[assembly: AssemblyCopyright("Copyright © Honkai Impact 4: Jalaxy Journey 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
