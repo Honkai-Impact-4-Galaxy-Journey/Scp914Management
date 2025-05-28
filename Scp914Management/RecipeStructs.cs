@@ -34,7 +34,6 @@ namespace Scp914Management
             int num;
             if (sumrate > 100) num = new Random().Next(1, sumrate + 1);
             else num = new Random().Next(1, 101);
-            Logger.Info(num);
             foreach (var item in Target)
             {
                 if (num - item.rate <= 0)
@@ -66,7 +65,6 @@ namespace Scp914Management
             int num;
             if (sumrate > 100) num = new Random().Next(1, sumrate + 1);
             else num = new Random().Next(1, 101);
-            Logger.Info(num);
             foreach (var item in Target)
             {
                 if (num - item.rate <= 0)
