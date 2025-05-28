@@ -54,7 +54,8 @@ namespace Scp914Management
 
         public override void Disable()
         {
-            ;
+            Scp914Handler.OnDisabled();
+            Scp914Handler.itemRecipes.Clear();
         }
         public override void Enable()
         {
@@ -70,6 +71,11 @@ namespace Scp914Management
         {
             Scp914Events.ProcessingInventoryItem += OnInventoryItemCrafting;
             Scp914Events.ProcessingPickup += OnItemCrafting;
+        }
+        public static void OnDisabled()
+        {
+            Scp914Events.ProcessingInventoryItem -= OnInventoryItemCrafting;
+            Scp914Events.ProcessingPickup -= OnItemCrafting;
         }
         public static void RegisterRecipes(params BaseItemRecipe[] recipes)
         {
