@@ -18,7 +18,7 @@ namespace Scp914Management
 
         public override string Author => "Honkai Impact 4: Galaxy Journey";
 
-        public override Version Version => new Version("1.0.0.0");
+        public override Version Version => new Version("1.0.1.0");
 
         public override Version RequiredApiVersion => new Version("0.0.0.0");
 
