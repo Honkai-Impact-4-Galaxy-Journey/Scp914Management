@@ -17,7 +17,8 @@ namespace Scp914Management
                     new Probability<ItemType> { result = ItemType.SCP207, amount = 1, rate = 4 }
                 },
                 Mode = Scp914.Scp914KnobSetting.VeryFine,
-                DestoryByDefault = true
+                DestoryByDefault = true,
+                Enabled = true
             },
             new BaseItemRecipe
             {
@@ -28,7 +29,8 @@ namespace Scp914Management
                     new Probability<ItemType> { result = ItemType.MicroHID, amount = 1, rate = 5 }
                 },
                 Mode = Scp914.Scp914KnobSetting.Rough,
-                DestoryByDefault = false
+                DestoryByDefault = false,
+                Enabled = true
             }
         };
     }

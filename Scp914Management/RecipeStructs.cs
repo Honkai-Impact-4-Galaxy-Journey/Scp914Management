@@ -22,7 +22,8 @@ namespace Scp914Management
         public List<Probability<ItemType>> Target { get; set; }
         public Scp914KnobSetting Mode { get; set; }
         public bool DestoryByDefault { get; set; } = true;
-        public virtual bool Match(ItemType origin) => Origin == origin;
+        public bool Enabled { get; set; } = true;
+        public virtual bool Match(ItemType origin) => Origin == origin && Enabled;
         public virtual void ProcessPickupCrafting(Scp914ProcessingPickupEventArgs ev)
         {
             int sumrate = 0;
