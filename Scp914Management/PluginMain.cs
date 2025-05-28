@@ -37,12 +37,12 @@ namespace Scp914Management
     public class Scp914Handler
     {
         public static List<BaseItemRecipe> itemRecipes = new List<BaseItemRecipe>();
-        public static void OnEnabled()
+        internal static void OnEnabled()
         {
             Scp914Events.ProcessingInventoryItem += OnInventoryItemCrafting;
             Scp914Events.ProcessingPickup += OnItemCrafting;
         }
-        public static void OnDisabled()
+        internal static void OnDisabled()
         {
             Scp914Events.ProcessingInventoryItem -= OnInventoryItemCrafting;
             Scp914Events.ProcessingPickup -= OnItemCrafting;
@@ -61,14 +61,14 @@ namespace Scp914Management
                 itemRecipes.Add(recipe);
             }
         }
-        public static void OnItemCrafting(Scp914ProcessingPickupEventArgs ev)
+        private static void OnItemCrafting(Scp914ProcessingPickupEventArgs ev)
         {
             BaseItemRecipe recipe = (from item in itemRecipes
                                     where item.Match(ev.Pickup.Type) && item.Mode == ev.KnobSetting
                                     select item).FirstOrDefault();
             recipe?.ProcessPickupCrafting(ev);
         }
-        public static void OnInventoryItemCrafting(Scp914ProcessingInventoryItemEventArgs ev)
+        private static void OnInventoryItemCrafting(Scp914ProcessingInventoryItemEventArgs ev)
         {
             BaseItemRecipe recipe = (from item in itemRecipes
                                      where item.Match(ev.Item.Type) && item.Mode == ev.KnobSetting
